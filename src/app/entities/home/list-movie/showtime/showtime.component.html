@@ -7,7 +7,7 @@
                 <li class="showtime-section-detail" *ngFor="let time of mapEntry.value">
                     <a style="cursor: pointer;" (click)="bookingSlot(time.maLichChieu)">
                         <time>{{ time.ngayChieuGioChieu | date: "hh:mm a" }} <span>2D</span></time>
-                        <div class="cluster-cinema-name">{{time.thongTinRap.tenCumRap}}</div>
+                        <div class="cluster-cinema-name">{{time.thongTinRap.tenCumRap | shortcut:10}}</div>
                     </a>
                 </li>
             </ul>

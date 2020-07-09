@@ -13,6 +13,8 @@ import { DetailMovieComponent } from './list-movie/detail-movie/detail-movie.com
 import { ShowtimeComponent } from './list-movie/showtime/showtime.component';
 import { BookSlotComponent } from './list-movie/book-slot/book-slot.component';
 import { CheckOutComponent } from './list-movie/check-out/check-out.component';
+import { PipeModule } from 'src/app/shared/pipe/pipe.module';
+import { ShortcutPipe } from 'src/app/shared/pipe/shortcut.pipe';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,6 @@ import { CheckOutComponent } from './list-movie/check-out/check-out.component';
     BookSlotComponent,
     CheckOutComponent,
   ],
-  imports: [CommonModule, HomeRoutingModule],
+  imports: [CommonModule, HomeRoutingModule, PipeModule],
 })
 export class HomeModule {}
