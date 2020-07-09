@@ -1,0 +1,8 @@
+<div class="container">
+    <h3 class="my-3">Top Movies</h3>
+    <div class="row">
+        <div class="col-md-3 col-xs-6" *ngFor=" let item of listMovie">
+            <app-item-movie [movie]="item"></app-item-movie>
+        </div>
+    </div>
+</div>

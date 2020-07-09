@@ -1,0 +1,87 @@
+.movie-detail {
+  .movie-backdrop {
+    height: 400px;
+    width: 100%;
+    background: center -100px transparent;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.8));
+    }
+  }
+  .container {
+    .movie-data {
+      margin-bottom: 60px;
+      .movie-poster {
+        position: relative;
+        margin-bottom: 20px;
+        margin-top: -100px;
+        img {
+          width: 100%;
+          height: 430px;
+          box-shadow: 0 0 60px 1px rgba(100, 100, 100, 0.6);
+        }
+        .movie-play-trailer {
+          display: block;
+          position: absolute;
+          bottom: 10px;
+          left: 15px;
+          width: 100px;
+          height: 100px;
+          background: url("../../../../../assets/play.png");
+          background-repeat: no-repeat;
+          opacity: 0.7;
+          z-index: 99;
+          transition: all 0.2s;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .movie-title {
+      position: absolute;
+      top: -80px;
+    }
+    .movie-info {
+      padding-top: 30px;
+    }
+    .movie-meta {
+      dl {
+        display: flex;
+        margin-bottom: 0;
+        font-size: 14px;
+      }
+      dt {
+        margin-right: 0.4rem;
+        color: #ddd;
+      }
+      dd {
+        color: #777;
+      }
+    }
+  }
+}
+
+.show {
+  transition: linear 0.5s;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+.show-less {
+  height: 15rem;
+  overflow: hidden;
+  transition: linear .3s;
+}
+@media (max-width: 767px) {
+  .movie-title {
+    position: relative;
+    top: 0;
+  }
+}

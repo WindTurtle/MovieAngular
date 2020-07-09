@@ -1,0 +1,46 @@
+.showtime {
+  border-top: 1px solid #1e1e1e;
+  padding-top: 15px;
+  margin-top: 15px;
+  .showtime-date {
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: #808080;
+  }
+  .showtime-section {
+    ul {
+      padding-left: 0;
+      margin-bottom: 20px;
+      li {
+        display: inline-block;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        &.showtime-section-detail {
+          a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 6px 20px;
+            border: 1px solid #333;
+            &:hover {
+              border-color: #808080;
+            }
+            time {
+              display: block;
+              color: #fff;
+            }
+            span {
+              border: 1px solid #f37735;
+              padding: 2px 5px;
+              color: #f37735;
+              font-size: 14px;
+            }
+            .cluster-cinema-name {
+              color: #707070;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

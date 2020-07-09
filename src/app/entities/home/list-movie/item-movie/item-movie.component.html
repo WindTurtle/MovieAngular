@@ -1,0 +1,13 @@
+<div class="item-movie my-4">
+    <div class="itemmovie-content">
+        <div class="overlay">
+            <div class="itemmovie-play-trailer" data-toggle="modal" data-target="#modelTrailer"
+                (click)="watchTrailer()"></div>
+        </div>
+        <a (click)="detailMovie()">
+            <img src="{{ movie.hinhAnh }}" alt="{{ movie.tenPhim }}" class="itemmovie-poster img-fluid" />
+            <span class="itemmovie-title">{{ movie.tenPhim }}
+            </span>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="movie-detail">
+    <div class="movie-backdrop"
+        [ngStyle]="{ 'background': 'url(' + movie.hinhAnh + ')' ,'background-repeat': 'no-repeat', 'background-size': 'cover' ,'background-position': 'center'}">
+    </div>
+    <div class="container">
+        <div class="movie-data row">
+            <div class="col-md-4">
+                <div class="movie-poster">
+                    <img class="img-fluid" src="{{ movie.hinhAnh }}" alt="{{ movie.tenPhim }}" />
+                    <a class="movie-play-trailer" data-toggle="modal" data-target="#modelTrailer"
+                        (click)="watchTrailer()"></a>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h2 class="movie-title">{{ movie.tenPhim }}</h2>
+                <div class="movie-info">
+                    <p class="movie-overview">{{ movie.moTa }}</p>
+                    <div class="movie-meta">
+                        <dl class="movie meta-director">
+                            <dt>Director:</dt>
+                            <dd>Unknown</dd>
+                        </dl>
+                        <dl class="movie-meta-cast">
+                            <dt>Starring:</dt>
+                            <dd>Unknown</dd>
+                        </dl>
+                        <dl class="movie-meta-runtime">
+                            <dt>Opening day:</dt>
+                            <dd>{{movie.ngayKhoiChieu | date : 'yyyy-MM-dd'}}</dd>
+                        </dl>
+                        <dl class="movie-meta-runtime">
+                            <dt>Running Time:</dt>
+                            <dd>120 min</dd>
+                        </dl>
+                    </div>
+
+                    <div [ngClass]="{'show-less': showShortShowTimes}">
+                        <app-showtime [movie]="movie"></app-showtime>
+                    </div>
+                    <a class="show" type="button" (click)="alterShowtimes()">
+                        {{ showShortShowTimes ? 'SHOW ALL': 'SHOW LESS' }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

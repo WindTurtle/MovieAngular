@@ -1,0 +1,36 @@
+.container-fluid {
+  .room-info {
+    .movie-poster {
+      position: relative;
+      img {
+        width: 100%;
+        height: 70%;
+        opacity: 0.4;
+      }
+      .movie-title {
+        bottom: 10%;
+        color: #fff;
+        right: 0;
+        width: 100%;
+        z-index: 2;
+        position: absolute;
+        font-size: 24px;
+        text-align: center;
+        text-transform: capitalize;
+      }
+    }
+    .movie-meta {
+      padding: 20px;
+      background: rgba(57, 61, 67, 0.5);
+      b {
+        font-size: 15px;
+        color: #ddd;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 13px;
+        color: rgb(187, 185, 185);
+      }
+    }
+  }
+}

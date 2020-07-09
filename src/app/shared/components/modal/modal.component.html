@@ -1,0 +1,16 @@
+<div class="modal bd-example-modal-lg fade" id="modelTrailer" tabindex="-1" role="dialog" aria-labelledby="modelId"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content bg-dark">
+            <div class="close-form">
+                <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" class="m-0">
+                <iframe [src]="getPreviewUrl()" width="100%" height="500" frameborder="0"
+                    allowscriptaccess="always"></iframe>
+            </div>
+        </div>
+    </div>
+</div>

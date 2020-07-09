@@ -1,0 +1,28 @@
+<div class="checkout">
+    <div class="screen-area">
+        <img src="https://image.freepik.com/free-vector/interior-cinema-movie-theatre-with-shiny-white-blank-screen-red-cinema-theater-seats-front-screen-empty-cinema-auditorium-background-illustration_88272-1400.jpg" width="100%"
+            height="25px" alt="screen">
+    </div>
+    <div class="slot-area container">
+        <div class="d-flex row">
+            <button class="col-1 m-1 slot" *ngFor="let slot of slots">
+                {{slot.tenGhe}}
+            </button>
+        </div>
+    </div>
+    <div class="row sidebar">
+        <div class="sidebar-left col-10">
+            <div class="sidebar-item mr-5">
+                <p class="item-title">Tickets</p>
+                <p class="item-content">0</p>
+            </div>
+            <div class="sidebar-item">
+                <p class="item-title">Price</p>
+                <p class="item-content">0</p>
+            </div>
+        </div>
+        <div class="sidebar-right col-2">
+            <button class="sidebar-button">Checkout</button>
+        </div>
+    </div>
+</div>

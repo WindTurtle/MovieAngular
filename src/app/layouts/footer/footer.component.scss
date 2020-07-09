@@ -1,0 +1,22 @@
+.footer {
+  font-size: 13px;
+  background: rgba(119, 119, 119, 0.15);
+  .container {
+    .footer-inner {
+      .footer-item {
+        .footer-sub-nav {
+          .menu-item {
+            a {
+              color: #fff;
+              text-decoration: none;
+              transition: linear 0.2s;
+              &:hover {
+                opacity: 0.7;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

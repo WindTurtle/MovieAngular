@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="room-info row">
+        <div class="col-3">
+            <div class="movie-poster">
+                <img [src]="room.thongTinPhim.hinhAnh" alt="hinhAnh">
+                <div class="movie-title">{{room.thongTinPhim.tenPhim}}</div>
+            </div>
+            <div class="movie-meta">
+                <div class="movie meta-director">
+                    <b>Cluster Cinema</b>
+                    <p>{{room.thongTinPhim.tenCumRap}}</p>
+                </div>
+                <div class="movie-meta-cast">
+                    <b>Show time</b>
+                    <p>{{room.thongTinPhim.ngayChieu}} - {{room.thongTinPhim.gioChieu}}</p>
+                </div>
+                <div class="movie-meta-runtime">
+                    <b>Cinema</b>
+                    <p>{{room.thongTinPhim.tenRap}}</p>
+                </div>
+                <div class="movie-meta-runtime">
+                    <b>Address</b>
+                    <p>{{room.thongTinPhim.diaChi}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            <app-check-out [room]="room"></app-check-out>
+        </div>
+    </div>
+</div>
