@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DomSanitizer } from '@angular/platform-browser';
 import { MovieService } from 'src/app/shared/services/movie.service';
 
 @Component({
@@ -16,7 +15,6 @@ export class DetailMovieComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private movieService: MovieService,
-    private domSanitizer: DomSanitizer
   ) {}
 
   ngOnInit(): void {

@@ -32,7 +32,6 @@ export class BookSlotComponent implements OnInit {
     const url = `QuanLyDatVe/LayDanhSachPhongVe?MaLichChieu=${this.maLichChieu}`;
     this.movieService.get(url).subscribe((data: any) => {
       this.room = data;
-      console.log(this.room);
     });
   }
 }

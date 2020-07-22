@@ -15,6 +15,13 @@ import { BookSlotComponent } from './list-movie/book-slot/book-slot.component';
 import { CheckOutComponent } from './list-movie/check-out/check-out.component';
 import { PipeModule } from 'src/app/shared/pipe/pipe.module';
 import { ShortcutPipe } from 'src/app/shared/pipe/shortcut.pipe';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { ItemSeatComponent } from './list-movie/check-out/item-seat/item-seat.component';
+import { RegisterComponent } from './register/register.component';
+import { CinemaSystemComponent } from './cinema-system/cinema-system.component';
+import { CinemaClusterComponent } from './cinema-cluster/cinema-cluster.component';
+import { ShowTimeByClusterCinemaComponent } from './show-time-by-cluster-cinema/show-time-by-cluster-cinema.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +36,13 @@ import { ShortcutPipe } from 'src/app/shared/pipe/shortcut.pipe';
     ShowtimeComponent,
     BookSlotComponent,
     CheckOutComponent,
+    LoginComponent,
+    ItemSeatComponent,
+    RegisterComponent,
+    CinemaSystemComponent,
+    CinemaClusterComponent,
+    ShowTimeByClusterCinemaComponent,
   ],
-  imports: [CommonModule, HomeRoutingModule, PipeModule],
+  imports: [CommonModule, HomeRoutingModule, PipeModule, FormsModule],
 })
 export class HomeModule {}

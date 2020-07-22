@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="card card-container login">
+        <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+        <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+        <p id="profile-name" class="profile-name-card"></p>
+        <form class="form-signin" #formLogin="ngForm" (ngSubmit)="Login(formLogin.value)">
+            <span id="reauth-email" class="reauth-email"></span>
+            <input type="text" #Account="ngModel" name="Account" id="inputEmail" class="form-control"
+                placeholder="Account" required autofocus ngModel>
+            <div class="alert alert-danger" *ngIf="(Account.touched || Account.dirty) && Account.errors">
+                <span class="text text-danger" *ngIf="Account.errors.required">Account isn't empty!</span>
+            </div>
+            <input type="password" #Password="ngModel" name="Password" id="inputPassword" class="form-control"
+                placeholder="Password" required ngModel>
+            <div class="alert alert-danger" *ngIf="(Password.touched || Password.dirty) && Password.errors">
+                <span class="text text-danger" *ngIf="Password.errors.required">Password isn't empty!</span>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+        </form>
+        <!-- /form -->
+    </div>
+    <!-- /card-container -->
+</div>

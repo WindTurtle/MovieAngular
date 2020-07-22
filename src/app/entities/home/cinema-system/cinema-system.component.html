@@ -1,0 +1,19 @@
+<div class="container mt-2">
+    <h3 class="my-3">Showtimes</h3>
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <ng-container *ngFor=" let item of listCinemaSystem">
+            <li class="nav-item">
+                <a class="nav-link pb-2" data-toggle="pill" href="#{{item.maHeThongRap}}" role="tab">
+                    <img [src]="item.logo" alt={{item.logo}} width="50" height="50">
+                </a>
+            </li>
+        </ng-container>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        <ng-container *ngFor=" let item of listCinemaSystem">
+            <div class="tab-pane fade" id={{item.maHeThongRap}} role="tabpanel">
+                <app-cinema-cluster [systemCinemaID]="item.maHeThongRap"></app-cinema-cluster>
+            </div>
+        </ng-container>
+    </div>
+</div>

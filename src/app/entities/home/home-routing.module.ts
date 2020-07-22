@@ -5,6 +5,8 @@ import { TrangChuComponent } from './trang-chu/trang-chu.component';
 import { ListMovieComponent } from './list-movie/list-movie.component';
 import { DetailMovieComponent } from './list-movie/detail-movie/detail-movie.component';
 import { BookSlotComponent } from './list-movie/book-slot/book-slot.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {
@@ -20,6 +22,14 @@ const routes: Routes = [
       {
         path: 'list-movie',
         component: ListMovieComponent,
+      },
+      {
+        path: 'login',
+        component: LoginComponent,
+      },
+      {
+        path: 'register',
+        component: RegisterComponent,
       },
       {
         path: 'detail-movie/:id',

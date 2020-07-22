@@ -56,22 +56,8 @@
   }
   .slot-area {
     .row {
-      padding: 0 200px;
+      padding: 0 0;
       justify-content: center;
-      .slot {
-        background-color: #f37735;
-        color: #ddd;
-        border: 1px solid #f37735;
-        padding: 15px 0;
-        border-radius: 2px;
-        text-align: center;
-        outline: none;
-        transition: linear 0.2s;
-        &:hover {
-          background-color: rgb(120, 205, 4);
-          border: 1px solid rgb(120, 205, 4);
-        }
-      }
     }
   }
 }

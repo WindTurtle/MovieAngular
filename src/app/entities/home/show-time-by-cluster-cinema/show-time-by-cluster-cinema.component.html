@@ -1,0 +1,26 @@
+<ng-container *ngFor=" let rap of listShowTime">
+    <ng-container *ngFor=" let cumRap of rap.lstCumRap">
+        <ng-container *ngFor=" let phim of cumRap.danhSachPhim">
+            <div *ngIf="cumRap.maCumRap === maCumRap">
+                <div class="card-title">
+                    <a href="#d{{phim.maPhim}}" data-toggle="collapse">
+                        <img class="mr-2" [src]="phim.hinhAnh" alt={{phim.hinhAnh}} width="60" height="60" />
+                        <span class="mr-2">{{phim.tenPhim}}</span>
+                        <span class="type">2D</span>
+                    </a>
+                </div>
+                <div class="collapse" id="d{{phim.maPhim}}">
+                    <div class="card card-body" style="background:none">
+                        <div class="row">
+                            <div class="col-2 showtime-item mr-3 mb-2"
+                                *ngFor="let lichChieu of phim.lstLichChieuTheoPhim">
+                                <a
+                                    (click)="bookingSlot(lichChieu.maLichChieu, phim.tenPhim)"><time>{{ lichChieu.ngayChieuGioChieu | date: "hh:mm a" }}</time></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </ng-container>
+</ng-container>

@@ -1,0 +1,29 @@
+.slot {
+  background-color: #f37735;
+  color: #ddd;
+  border: 1px solid #f37735;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 2px;
+  text-align: center;
+  outline: none;
+  transition: linear 0.2s;
+  &:hover {
+    background-color: rgb(120, 205, 4);
+    border: 1px solid rgb(120, 205, 4);
+  }
+}
+
+.gheVip {
+  background-color: rgb(209, 123, 195);
+}
+.gheDangChon {
+  background-color: rgb(120, 205, 4);
+}
+
+.gheDaDat {
+  background-color: rgb(75, 71, 71);
+  opacity: 0.6;
+  cursor: no-drop;
+}

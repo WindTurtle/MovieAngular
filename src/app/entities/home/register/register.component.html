@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="card card-container register">
+        <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+        <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+        <p id="profile-name" class="profile-name-card"></p>
+        <form class="form-signin" #formRegister="ngForm" (ngSubmit)="Register(formRegister.value)">
+            <span id="reauth-email" class="reauth-email"></span>
+            <input type="text" #Account="ngModel" name="Account" id="inputEmail" class="form-control"
+                placeholder="Account" required autofocus ngModel>
+            <div class="alert alert-danger" *ngIf="(Account.touched || Account.dirty) && Account.errors">
+                <span class="text text-danger" *ngIf="Account.errors.required">Account isn't empty!</span>
+            </div>
+            <input type="password" #Password="ngModel" name="Password" id="inputPassword" class="form-control"
+                placeholder="Password" required ngModel>
+            <div class="alert alert-danger" *ngIf="(Password.touched || Password.dirty) && Password.errors">
+                <span class="text text-danger" *ngIf="Password.errors.required">Password isn't empty!</span>
+            </div>
+            <input type="text" #Name="ngModel" name="Name" id="inputEmail" class="form-control" placeholder="Name"
+                required autofocus ngModel>
+            <div class="alert alert-danger" *ngIf="(Name.touched || Name.dirty) && Name.errors">
+                <span class="text text-danger" *ngIf="Name.errors.required">Name isn't empty!</span>
+            </div>
+            <input type="text" #Email="ngModel" name="Email" id="inputEmail" class="form-control" placeholder="Email"
+                required autofocus ngModel>
+            <div class="alert alert-danger" *ngIf="(Email.touched || Email.dirty) && Email.errors">
+                <span class="text text-danger" *ngIf="Email.errors.required">Email isn't empty!</span>
+            </div>
+            <input type="text" #Phone="ngModel" name="Phone" id="inputEmail" class="form-control" placeholder="Phone"
+                required autofocus ngModel>
+            <div class="alert alert-danger" *ngIf="(Phone.touched || Phone.dirty) && Phone.errors">
+                <span class="text text-danger" *ngIf="Phone.errors.required">Phone isn't empty!</span>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+        </form>
+        <!-- /form -->
+    </div>
+    <!-- /card-container -->
+</div>

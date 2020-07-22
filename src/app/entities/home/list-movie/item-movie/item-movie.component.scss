@@ -49,9 +49,11 @@
   .itemmovie-content {
     .itemmovie-poster {
       transition: all 0.2s;
+      border-radius: 10px;
       display: block;
       width: 100%;
       height: 350px;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
     }
 
     .itemmovie-title {

@@ -1,8 +1,9 @@
 <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #000;">
-    <a class="navbar-brand" href="#"><img src="https://angular.io/assets/images/logos/angular/angular.png" width="40" height="100%"
-            alt="logo"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <a class="navbar-brand" href="#"><img src="https://angular.io/assets/images/logos/angular/angular.png" width="40"
+            height="100%" alt="logo"></a>
+    <button class="navbar-toggler" type="button" style="outline:none; border: none" data-toggle="collapse"
+        data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+        aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
@@ -21,10 +22,19 @@
         </form>
         <ul class="navbar-nav mt-2 mt-lg-0">
             <li class="nav-item">
-                <a class="nav-link" routerLink="/list-movie">Sign up</a>
+                <a class="nav-link" routerLink="/register">Sign up</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="">Log In</a>
+            <li class="nav-item" *ngIf="!account">
+                <a class="nav-link" routerLink="/login">Log In</a>
+            </li>
+            <li class="nav-item" *ngIf="account">
+                <div style="cursor: pointer;" class="nav-link" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">Hello,
+                    {{account}}</div>
+                <div class="dropdown-menu myClass" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#" (click)="Logout()">Logout</a>
+                </div>
             </li>
         </ul>
     </div>

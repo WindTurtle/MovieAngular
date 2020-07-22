@@ -1,0 +1,32 @@
+.card-title {
+  border-bottom: 0.5px solid rgba(231, 223, 200, 0.5);
+  padding-bottom: 10px;
+  transition: linear 0.3s;
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  &:hover {
+    border-bottom: 0.5px solid #f37735;
+  }
+  .type {
+    border: 1px solid #f37735;
+    padding: 2px 5px;
+    color: #f37735;
+    font-size: 14px;
+  }
+}
+.collapse {
+  .showtime-item {
+    border: 1px solid #f37735;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
