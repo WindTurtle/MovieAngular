@@ -79,6 +79,7 @@ export class CheckOutComponent implements OnInit {
       if (item.ghe.maGhe === ghe.maGhe) {
         item.trangThaiDatGhe = false;
       }
+      this.cost = item.ghe.giaVe * this.mangGheDangChon.length;
     });
   }
 }

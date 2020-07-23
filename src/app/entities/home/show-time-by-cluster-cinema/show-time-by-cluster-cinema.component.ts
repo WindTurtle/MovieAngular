@@ -21,7 +21,6 @@ export class ShowTimeByClusterCinemaComponent implements OnInit {
     const url = `QuanLyRap/LayThongTinLichChieuHeThongRap?maHeThongRap=${this.maHeThongRap}&&maNhom=GP09`;
     this.movieService.get(url).subscribe((data) => {
       this.listShowTime = data;
-      console.log(data);
     });
   }
   bookingSlot(maLichChieu, tenPhim) {

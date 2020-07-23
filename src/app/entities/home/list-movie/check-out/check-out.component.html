@@ -17,7 +17,7 @@
                 <p class="item-title">Seat</p>
                 <span class="item-content" *ngFor="let ghe of mangGheDangChon; let index = index">
                     Ghế: {{ ghe.giaVe }} VNĐ
-                    <span style="color:red" (click)="huy(index, ghe)">[Hủy]</span>
+                    <span style="color:rgb(247, 57, 57); cursor: pointer;" (click)="huy(index, ghe)">[Hủy]</span>
                 </span>
             </div>
             <div class="sidebar-item">

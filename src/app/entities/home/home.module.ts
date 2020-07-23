@@ -23,6 +23,10 @@ import { CinemaSystemComponent } from './cinema-system/cinema-system.component';
 import { CinemaClusterComponent } from './cinema-cluster/cinema-cluster.component';
 import { ShowTimeByClusterCinemaComponent } from './show-time-by-cluster-cinema/show-time-by-cluster-cinema.component';
 
+// Import the library
+import { CarouselModule } from 'ngx-owl-carousel-o';
+// Needs to import the BrowserAnimationsModule
+import { ItemMovieCarouselComponent } from './list-movie/item-movie-carousel/item-movie-carousel.component';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -42,7 +46,14 @@ import { ShowTimeByClusterCinemaComponent } from './show-time-by-cluster-cinema/
     CinemaSystemComponent,
     CinemaClusterComponent,
     ShowTimeByClusterCinemaComponent,
+    ItemMovieCarouselComponent,
   ],
-  imports: [CommonModule, HomeRoutingModule, PipeModule, FormsModule],
+  imports: [
+    CommonModule,
+    HomeRoutingModule,
+    PipeModule,
+    FormsModule,
+    CarouselModule,
+  ],
 })
 export class HomeModule {}
