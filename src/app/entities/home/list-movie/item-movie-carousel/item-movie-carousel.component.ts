@@ -12,7 +12,6 @@ export class ItemMovieCarouselComponent implements OnInit {
 
   customOptions: OwlOptions = {
     loop: true,
-    autoplay: true,
     center: true,
     dots: false,
     nav: true,
